@@ -1,1 +1,0 @@
-vaje računalniški praktikum
