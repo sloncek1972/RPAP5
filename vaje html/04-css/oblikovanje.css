@@ -18,8 +18,19 @@ body {
     /*  Obojestranska poravnava besedila    */
     text-align: justify;
 }
+
 h1 {
     color: #330066;
+}
+h2 {
+    
+    margin-top: 2em;
+
+    
+    border-top: 1px solid #AAAAAA;
+
+    
+    padding-top: 0.5em;
 }
 /*  Odstranimo podčrtovanje povezav in outline (ta se včasih pokaže kot kvadratek okrog povezave)  */
 a { text-decoration: none; outline:none; }
@@ -32,4 +43,36 @@ a:active { color:#990000; outline:none; }
 code {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     color: #009966;
+}
+
+#uvod {
+    padding: 2em;
+    background-color: rgba(51, 0, 102, 0.1);
+}
+
+.slika {
+    font-size: 0.9em;       
+    width: 40%;        
+    text-align: left;      
+    float: right;           
+    margin-left: 2em;      
+    
+}
+
+.slika img {
+    width: 100%;   
+    height: auto; 
+    border-radius:50%
+}
+
+.slika p:last-child {
+    font-size: 0.8em;                 
+    margin-top: 1em;                 
+    background-color: #20867b;       
+}
+
+a::before {
+    content: "→ ";               
+    color: #0b8a0f;                  
+    margin-right: 0.5em;          
 }
