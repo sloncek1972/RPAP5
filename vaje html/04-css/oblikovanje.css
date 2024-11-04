@@ -50,6 +50,11 @@ code {
     background-color: rgba(51, 0, 102, 0.1);
 }
 
+#jedro {
+    padding: 2em;
+    background-color: rgba(122, 255, 6, 0.1);
+}
+
 .slika {
     font-size: 0.9em;       
     width: 40%;        
@@ -76,3 +81,4 @@ a::before {
     color: #0b8a0f;                  
     margin-right: 0.5em;          
 }
+
