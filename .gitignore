@@ -9,13 +9,8 @@
 *.fls
 *.log
 *.out
-*.pdf
 *.pyc
 *.synctex.gz
-
-# MacOS
-__MACOSX
-.DS_Store
 
 # Windows
 thumbs.db
