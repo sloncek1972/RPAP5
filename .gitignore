@@ -11,6 +11,7 @@
 *.out
 *.pyc
 *.synctex.gz
+*.bib
 
 # Windows
 thumbs.db
