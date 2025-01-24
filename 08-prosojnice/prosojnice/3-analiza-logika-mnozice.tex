@@ -1,27 +1,50 @@
+
+\begin{frame}
+	\frametitle{Matematika, 1. del}
+ Analiza, logika in množice.
+	
+  \end{frame}
+
 \begin{frame}{Logika in množice}
 	\begin{enumerate}
 		\item
-		Poišči preneksno obliko formule ??.
+		Poišči preneksno obliko formule \[
+\exists x : P(x) \land \forall x : Q(x) \Rightarrow \forall x : R(x)
+\].
 		\item 
-		Definiramo množici ?? in ??.
+		Definiramo množici $A$=[2,5] in $B$={0,1,2,3,4\dots}.
 		V ravnino nariši:
 		\begin{enumerate}
-		   \item ??
-		   \item ??
+		   \item \[ \displaystyle
+A \cap B \times \emptyset
+\]
+		   \item \[ \displaystyle
+(A \cup B)^c \times \mathbb{R}
+\]
 		\end{enumerate}
 		\item
 		Dokaži:
 		\begin{itemize}
-			\item ??
-			\item ??
-		\end{itemize}
+			\item Prva enačba:
+			\begin{align*}
+				\neg (A \lor B) &\sim (\neg A \land \neg B)
+			\end{align*}
+			\item Druga enačba:
+			\begin{align*}
+				(A \Rightarrow B) &\sim (\neg B \Rightarrow \neg A)
+			\end{align*}
+			\item Tretja enačba:
+			\begin{align*}
+				A \cap B &\times \emptyset
+			\end{align*}
+	    \end{itemize}
 	\end{enumerate}
 \end{frame}
 
 \begin{frame}{Analiza}
 	\begin{enumerate}
 		\item
-		Pokaži, da je funkcija ?? enakomerno zvezna na ??.
+		Pokaži, da je funkcija \[ x\to\sqrt{x} \] enakomerno zvezna na ??.
 		\item 
 		Katero krivuljo določa sledeč parametričen zapis?
 		% Spodaj si pomagajte z dokumentacijo o razmikih v matematičnem načinu.

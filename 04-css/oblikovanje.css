@@ -78,7 +78,7 @@ code {
 
 a::before {
     content: "→ ";               
-    color: #0b8a0f;                  
+    color: #fcf8f8;                  
     margin-right: 0.5em;          
 }
 

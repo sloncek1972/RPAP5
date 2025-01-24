@@ -9,12 +9,22 @@
 \usepackage{amsthm}
 \usepackage{graphicx}
 \usepackage{amsmath} 
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{xypic}
+\usepackage{booktabs} % za lepše tabele
+\usepackage{multirow}
+\usepackage{array}       % Za nadzor višine celic
+\usepackage{hhline} 
 
-\renewcommand{\proofname}{Dokaz izreka}
-\theoremstyle{definition}
+
+\theoremstyle{plain}
 \newtheorem{theorem}{Izrek}
+
+\theoremstyle{definition}
 \newtheorem{definition}{Definicija}
+
+\addto\captionsslovene{\renewcommand{\proofname}{Dokaz izreka}}
 
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
@@ -69,7 +79,7 @@ Prirejeno iz virov:
 \section{Uvod}
 
 \begin{definition}
-   \textcolor{red}{\emph{Magični kvadrat}} reda $n$ je nabor $n^2$ različnih števil,
+   \textcolor{Mahogany}{\emph{Magični kvadrat}} reda $n$ je nabor $n^2$ različnih števil,
    ki so razvrščena v kvadratno tabelo tako, da vedno dobimo enako vsoto,
    če seštejemo vsa števila poljubne vrstice, vsa števila poljubnega
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
@@ -98,7 +108,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mg3}.
 \end{table}
 
 \begin{definition}
-   Magični kvadrat reda $n$ je \textcolor{red}{\emph{normalen}}, če v njem nastopajo števila
+   Magični kvadrat reda $n$ je \textcolor{Mahogany}{\emph{normalen}}, če v njem nastopajo števila
    \begin{equation}
       \label{eq:numbers}
       1, 2, 3, \ldots, n^2-1, n^2.
@@ -176,7 +186,7 @@ Lo Shu, vendar je vsako število povečano za 19.
 \end{table}
 
       Z magičnimi kvadrati so se ukvarjali tudi najbolj znani matematiki kot na
-primer Euler, glej ???. % ključ: euler
+primer Euler, glej \cite{euler}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -185,9 +195,10 @@ primer Euler, glej ???. % ključ: euler
 Najzgodnejši znani magični kvadrat reda 4 je bil odkrit na napisu
 v Khajurahu v Indiji in v Enciklopediji Bratovščine Čistosti iz enajstega
 ali dvanajstega stoletja. Vrh vsega gre celo za ">panmagični kvadrat"<.
-V Evropi sta morda najbolj znana naslednja magična kvadrata reda 4:
+V Evropi sta morda najbolj znana naslednja magična kvadrata reda 4. \vspace{1.5em}
 
-Magični kvadrat v litografiji Melancholia I (glej sliko \ref{fig:durer}
+
+\textbf{Magični kvadrat v litografiji Melancholia I} (glej sliko \ref{fig:durer}
 za izsek s kvadratom) Albrechta Dürerja naj bi bil najzgodnejši magični kvadrat
 v evropski umetnosti. Zelo podoben je kvadratu Yang Huija, ki je nastal na Kitajskem
 približno 250 let pred Dürerjevim časom.
@@ -220,6 +231,7 @@ simetričnih parov ($2+8+9+15$ in $3+5+12+14$), in še na nekaj drugih načinov.
 %    4 & 15 & 14 &  1 \\\hline
 \begin{table}[h!]
    \centering
+   \renewcommand{\arraystretch}{1.2}
    \caption{Dürerjev magični kvadrat $4\times 4$}
    \label{durer}
    \begin{tabular}{|c|c|c|c|}
@@ -229,9 +241,9 @@ simetričnih parov ($2+8+9+15$ in $3+5+12+14$), in še na nekaj drugih načinov.
        9 &  6 &  7 & 12 \\\hline
        4 & 15 & 14 &  1 \\\hline
    \end{tabular}
-\end{table}
+\end{table} \vspace{1.5em}
 
-Pasijonska fasada na katedrali Sagrada família v Barceloni
+\textbf{Pasijonska fasada na katedrali Sagrada família v Barceloni}
 (glej sliko \ref{fig:sagrada} za fotografijo) vsebuje magični kvadrat reda 4.
 
 \begin{figure}[h!]
@@ -286,7 +298,7 @@ in zato kvadrat ni normalen.
 
 \begin{proof}
    V normalnem magičnem kvadratu reda $n$ je vsota vseh nastopajočih
-   števil (glej ?? na strani ??) enaka
+   števil (glej \ref{eq:numbers} na strani \pageref{eq:numbers}) enaka
    $1+2+3+\dots+n^2=\sum_{k=1}^{n^2}k=\frac{1}{2}n^2(n^2+1)$. Ker imamo
    v kvadratu $n$ vrstic z enako vsoto, je vsota števil v eni vrstici
    enaka številu $M_2(n)$. \ref{eq:numbers}
@@ -294,7 +306,7 @@ in zato kvadrat ni normalen.
    
 % Konec dokaza
 
-Preprost račun pokaže, da je konstanti \ref{2} analogna konstanta
+Preprost račun pokaže, da je konstanti \ref{eq:mc} analogna konstanta
 $M_2(n;A,D)$ za magični kvadrat, v katerem so nameščena števila
 $A$, $A+D$, $A+2D$, \dots, $A+(n^2-1)D$, enaka
 \begin{equation}
@@ -302,7 +314,7 @@ $A$, $A+D$, $A+2D$, \dots, $A+(n^2-1)D$, enaka
    M2(n;A,D) = \frac{1}{2} n \left( 2A + D \left( n^2 - 1 \right) \right)
 \end{equation}
 
-Kvadratu v tabeli ?!? ustrezata konstanti $A=20$ in $D=1$.
+Kvadratu v tabeli \ref{kubera} ustrezata konstanti $A=20$ in $D=1$.
 
 \begin{definition}
       Če vsako od števil v normalnem magičnem kvadratu reda $n$ odštejemo
@@ -311,7 +323,7 @@ Kvadratu v tabeli ?!? ustrezata konstanti $A=20$ in $D=1$.
 \end{definition}
 
 Na primer, magičnemu kvadratu Lo Shu (glej tabelo \ref{loshu}) priredimo
-komplementarni kvadrat, prikazan v tabeli \ref{closhu}.
+komplementarni kvadrat, prikazan v tabeli \ref{closhu}. \par
 %
 % - napis nad tabelo: Kvadratu Lo Shu komplementarni kvadrat
 % - oznaka: ttable:closhu
@@ -320,6 +332,7 @@ komplementarni kvadrat, prikazan v tabeli \ref{closhu}.
 %   2 & 9 & 4 \\\hline
 \begin{table}[h!]
    \centering
+   \renewcommand{\arraystretch}{1.2}
    \caption{Kvadratu Lo Shu komplementarni kvadrat}
    \label{closhu}
    \begin{tabular}{|c|c|c|}
@@ -328,15 +341,15 @@ komplementarni kvadrat, prikazan v tabeli \ref{closhu}.
       7 & 5 & 3 \\\hline
       2 & 9 & 4 \\\hline
    \end{tabular}
-\end{table}
+\end{table} \vspace{1.5em}
 Vidimo, da je dobljeni kvadrat moč dobiti iz kvadrata Lo Shu tudi z zasukom za
-180 stopinj okrog središča, kvadrat iz tabele ?!? pa je mogoče dobiti
+180 stopinj okrog središča, kvadrat iz tabele \ref{table:mg3} pa je mogoče dobiti
 iz kvadrata Lo Shu z zrcaljenjem preko sredinske vodoravne črte.
 
-Število različnih normalnih magičnih kvadratov
+
 
 \begin{definition}
-      Pravimo, da sta dva magična kvadrata \emph{različna}, če enega ni mogoče dobiti
+      Pravimo, da sta dva magična kvadrata \textcolor{Mahogany}{\emph{različna}}, če enega ni mogoče dobiti
       iz drugega s pomočjo zasukov oziroma zrcaljenj.
 \end{definition}
 
@@ -349,23 +362,22 @@ iz kvadrata Lo Shu z zrcaljenjem preko sredinske vodoravne črte.
     \centering
     \caption{Število različnih normalnih magičnih kvadratov}
     \label{stevila}
-    \begin{tabular}{lcc}
+    \begin{tabular}{lcccccc}
         \hline
-        \textbf{} & \textbf{Točna vrednost} & \textbf{Približek} \\ \hline
-        \textbf{Red} & $1, 2, 3, 4, 5$ & $6$ \\ 
-        \textbf{Število kvadratov} & $1, 0, 1, 880, 275305224$ & $(1.7745 \pm 0.0016) \times 10^{19}$ \\ \hline
+        \multicolumn{6}{r}{Točna vrednost} & Približek \\ \hline
+        Red & 1 & 2 & 3 & 4 & 5 & 6 \\ 
+        Število kvadratov & 1 & 0 & 1 & 880 & 275305224 & $(1.7745 \pm 0.0016) \times 10^{19}$ \\ \hline
     \end{tabular}
 \end{table}
 % Konec tabele
 
 Vse normalne magične kvadrate reda 4 je oštevilčil Frénicle de Bessy
-leta 1693, glej \label{bessy}, in jih je moč najti v knjigi \label{berlekamp}
+leta 1693, glej \cite{bessy}, in jih je moč najti v knjigi \cite{berlekamp}
 iz leta 1982. Število normalnih kvadratov reda 5 je izračunal
-R. Schroeppel leta 1973 (glej Gardner \label{gardner}).
+R. Schroeppel leta 1973 (glej Gardner \cite{gardner}).
 Natančno število vseh različnih normalnih magičnih kvadratov reda 6 ni znano.
-Avtorja navedenega približka sta Pinn in Wieczerkowski (glej \label{pinn}), ki
+Avtorja navedenega približka sta Pinn in Wieczerkowski (glej \cite{pinn}), ki
 sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
- % ključi: bessy, berlekamp, gardner, pinn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -394,6 +406,7 @@ magični kvadrati redov 5, 6 in 9.
        11 & 18 & 25 &  2 &  9 \\\hline
     \end{tabular}
  \end{table}
+ \newpage
 % - napis nad tabelo: Magični kvadrat reda 6
 % - oznaka: table:mag6
 %    6 & 32 &  3 & 34 & 35 &  1 \\\hline
@@ -445,6 +458,9 @@ magični kvadrati redov 5, 6 in 9.
     \end{tabular}
  \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{siam}
+\bibliography{magic}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

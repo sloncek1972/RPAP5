@@ -10,10 +10,19 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{bookmark}
+\usepackage{tikz}
+\usetikzlibrary{math}
+\usepackage{pgfplots}
+\usepgfplotslibrary{external}
+\usepackage{array}
+
 
 % Naloga 1.3.3: definirajte okolji `definicija' in `izrek'.
 \newtheorem{mydefinition}{Definicija}
 \newtheorem{izrek}{Izrek}
+
+\newcommand{\C}[2]{#1 \in \mathbb{#2}}
 
 
 % Namig: z iskanjem po datotekah (Ctrl+Shift+F oz. Cmd+Shift+F) 
@@ -54,36 +63,28 @@
 \input{prosojnice/1-paket-beamer.tex}
     
 \section{Paketa \texttt{amsmath} in \texttt{amsfonts}}
-    \begin{frame}
-      \frametitle{Paketa \texttt{amsmath} in \texttt{amsfonts}}
-      Vsebina za paketa \texttt{amsmath} in \texttt{amsfonts}.
-    \end{frame}
+\input{prosojnice/2-paketa-amsmath-amsfonts.tex}
     
     
 \section[Matematika, 1. del\\\large{Analiza, logika, množice}]{Matematika, 1. del}
-    \begin{frame}
-      \frametitle{Matematika, 1. del}
-      Vsebina za matematiko, 1. del, analiza, logika in množice.
-    \end{frame}
+\input{prosojnice/3-analiza-logika-mnozice.tex}
+
     
 \section{Stolpci in slike}
-    \begin{frame}
-      \frametitle{Stolpci in slike}
-      Vsebina za stolpce in slike.
-    \end{frame}
+\input{prosojnice/4-stolpci-slike.tex}
+    
     
 
 \section{Paket \texttt{beamer} in tabele}
-    \begin{frame}
-      \frametitle{Paket \texttt{beamer} in tabele}
-      Vsebina za paket \texttt{beamer} in tabele.
-    \end{frame}
+\input{prosojnice/5-beamer-tabele.tex}
+
+\section{Matematika, 2.del}
+\input{prosojnice/6-zaporedja-algebra-grupe.tex}
+   
     
 
 \section[Matematika, 2. del\\\large{Zaporedja, algebra, grupe}]{Matematika, 2. del}
-    \begin{frame}
-      \frametitle{Matematika, 2. del}
-      Vsebina za matematiko, 2. del, zaporedja, algebra in grupe.
-    \end{frame}
+
+    
 
 \end{document}
